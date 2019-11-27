@@ -462,8 +462,5 @@ error.js：异常错误封装
 
 help.js：请求封装
 
-<<<<<<< HEAD
 util.js：jwt获取token
-=======
-util.js：jwt获取token
->>>>>>> ef026f27e5db381ea45fa344b11c0664140bf4ee
+
