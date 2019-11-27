@@ -22,6 +22,7 @@
 <script>
 /* eslint-disable */
 import userApi from "@/api/user";
+import { setMetabase } from '@/libs/util'
 import { Message } from "iview";
 export default {
   data() {
@@ -43,6 +44,16 @@ export default {
       });
     },
     handleCancel() {
+      // const data = {
+      //   username: 'bmm_java@163.com',
+      //   password: '123456'
+      // }
+      // userApi.metabase(data).then(res=>{
+      //   // console.log(9999999999)
+      //   // console.log(res)
+      //   // console.log(res.data.id)
+      //   setMetabase(res.data.id)
+      // })
       this.$router.back();
     },
     save() {

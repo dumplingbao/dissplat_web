@@ -9,7 +9,7 @@ import {
   restoreTrash,
   getUnreadCount
 } from '@/api/user'
-import { setToken, getToken } from '@/libs/util'
+import { setToken, setMetabase, getToken } from '@/libs/util'
 
 export default {
   state: {
@@ -41,6 +41,10 @@ export default {
     setToken (state, token) {
       state.token = token
       setToken(token)
+    },
+    setMetabase (state, token) {
+      state.token = token
+      setMetabase(token)
     },
     setHasGetInfo (state, status) {
       state.hasGetInfo = status
@@ -76,7 +80,7 @@ export default {
     // 登录
     handleLogin ({ commit }, { userName, password }) {
       userName = userName.trim()
-      // console.log('daodaodaodaodao')
+      console.log('daodaodaodaodao')
       return new Promise((resolve, reject) => {
         login({
           userName,

@@ -1,10 +1,14 @@
 import axios from '@/libs/api.request'
+import axiosmetabase from '@/libs/metabase.request'
 
 export const userList = () => {
   return axios.request({
     url: 'api/user/findList',
     method: 'get'
   })
+}
+export const metabase = (data) => {
+  return axiosmetabase.request({ url: 'api/session', data, method: 'post' })
 }
 
 export const save = (data) => {
@@ -16,7 +20,6 @@ export const login = ({ userName, password }) => {
     email: userName,
     password
   }
-  console.log(5555555555555)
   return axios.request({
     url: 'api/user/login',
     data,
@@ -104,5 +107,6 @@ export const restoreTrash = msg_id => {
 export default {
   userList,
   save,
-  login
+  login,
+  metabase
 }
